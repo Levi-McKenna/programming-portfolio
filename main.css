@@ -18,6 +18,25 @@ p {
 
 /* @ Page Styles */
 
+.circuit-trace--line-0 {
+    left: 1.25vw;
+    bottom: .25vh;
+}
+
+.circuit-trace--branch {
+    display: flex;
+    width: min-content;
+}
+
+.circuit-trace--line-1 {
+    left: 1.25vw;
+    bottom: .25vh;
+    transform-origin: top left;
+    transform: rotate(-45deg);
+}
+
+.circuit-trace--line-2 {
+}
 
 /* -- */
 
@@ -30,11 +49,31 @@ p {
 }
 
 .circuit-trace--pad {
-    color: white;
     width: 2.5vw;
     height: 2.5vw;
     border: 1.25vw solid black;
     border-radius: 100%;
+}
+
+.circuit-trace--line {
+    background-color: black;
+    width: 2.5vw;
+    height: 25vh;
+    position: relative;
+}
+
+/* -- */
+
+/* @ Device Styles */
+
+@media (min-width: 1200px) {
+    .circuit-trace--line-0 {
+        bottom: 1vh;
+    }
+
+    .circuit-trace--line-1 {
+        bottom: 1vh;
+    }
 }
 
 /* -- */
