@@ -9,9 +9,10 @@ p {
     font-size: 2.5vh;
 }
 
-svg {
+.container {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 /* -- */
