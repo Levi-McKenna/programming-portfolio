@@ -1,11 +1,13 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html 
+    lang="en"
     <head>
         <title>Portfolio</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
+        <!--
         <div class="circuit-trace">
             <div class="circuit-trace--pad"></div>
             <div class="circuit-trace--line circuit-trace--line-0"></div>
@@ -14,5 +16,25 @@
                 <div class="circuit-trace--line circuit-trace--line-2"></div>
             </div>
         </div>
+-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="10000" height="10000">
+            <defs>
+                <g id="circuit-trace--line-1">
+                    <circle cx="75" cy="75" r="30" stroke="black" stroke-width="15"
+                        fill="transparent"/>
+                    <polyline points="75,100 75,400 400,700 400,900 450,1000 900,1000
+                        900,1800" style="fill:none;stroke:black;stroke-width:30;"/>
+                    <circle cx="900" cy="1825" r="30" stroke="black" stroke-width="15"
+                        fill="transparent"/>
+                </g>
+                <g id="circuit-trace--line-2">
+                    <circle cx="425" cy="95" r="30" stroke="black" stroke-width="15"
+                        fill="transparent"/>
+                </g>
+            </defs>
+            <use href="#circuit-trace--line-1"/>
+            <use x="75" y="-25" href="#circuit-trace--line-1"/>
+            <use href="#circuit-trace--line-2"/>
+        </svg> 
     </body>
 </html>
