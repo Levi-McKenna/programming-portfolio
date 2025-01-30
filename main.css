@@ -1,92 +1,85 @@
+/* "Workbench" */
+@import url('https://fonts.googleapis.com/css2?family=Workbench&display=swap');
+
 /* @ General Styles */
 
 body {
     background-color: rgba(0, 0, 0, 0.1);
+    color: #141414;
+    font-family: "Courier New", monospace;
     margin: 0;
 }
 
-p {
-    font-size: 2.5vh;
-}
-
-.container {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+h1 {
+    font-size: 4em;
 }
 
 /* -- */
 
 /* @ Utility Styles */
 
+.digital-font {
+    font-family: "Workbench";
+    font-weight: 100;
+    color: white;
+}
 
 /* -- */
 
 /* @ Page Styles */
 
-.circuit-trace--line-0 {
-    /* custom height */
-    height: 25%;
-    left: 1.25vw;
-    bottom: .25vh;
+.landing-page {
+    width: 100vw;
+    height: 100vh;
 }
 
-.circuit-trace--branch {
-    width: 25%;
-    height: 30%;
+.landing-page--intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    right: 25%;
+    top: 30%;
 }
 
-.circuit-trace--line-1 {
-    /* custom height */
-    height: 50%;
-    left: 1.25vw;
-    bottom: .25vh;
-    transform-origin: top left;
-    transform: skew(45deg);
+.landing-page--intro--header {
+    color: #141414;
 }
 
-.circuit-trace--line-2 {
-    /* custom height */
-    height: 60%;
-    margin-left: auto;
-    bottom: .25vh;
+.landing-page--header span {
+    color: white; 
+    font-size: 1em;
+}
+
+.landing-page--intro--desc {
+    font-size: 2em;
+}
+
+
+.landing-page--background {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.circuit-trace {
+    fill: none;
+    stroke:url("#trace-gradients");
+    stroke-width:15;
 }
 
 /* -- */
 
 /* @ Site Styles */
 
-.circuit-trace {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-}
-
-.circuit-trace--pad {
-    width: 2.5vw;
-    height: 2.5vw;
-    border: 1.25vw solid #141414;
-    border-radius: 100%;
-}
-
-.circuit-trace--line {
-    width: 2.5vw;
-    background-color: #141414;
-    position: relative;
-}
-
 /* -- */
 
 /* @ Device Styles */
 
 @media (min-width: 1200px) {
-    .circuit-trace--line-0 {
-        bottom: 1vh;
-    }
-
-    .circuit-trace--line-1 {
-        bottom: 1vh;
-    }
 }
 
 /* -- */
