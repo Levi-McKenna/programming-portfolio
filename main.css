@@ -16,7 +16,7 @@
 body {
     background-color: rgba(0, 0, 0, 0.1);
     font-family: var(--fg-font-default);
-    color: white;
+    color: var(--fg-text-default);
     margin: 0;
     overflow: hidden;
 }
@@ -36,37 +36,33 @@ h1 {
 .landing-page {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .landing-page--intro {
-    width: fit-content;
+    width: 70%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: start;
-    text-align: center;
-    position: relative;
-    left: 25%;
-    top: 20%;
 }
 
 .landing-page--intro--header-0 {
-    position: relative;
-    right: 25%;
-    font-size: 6em;
+    font-size: 3em;
 }
 
 .landing-page--intro--header-1 {
-    background: linear-gradient(-300deg, white 40%, #0047ab);
+    /* background: linear-gradient(-180deg, var(--fg-text-default) 40%, var(--fg-text-special)); */
     background-clip: text;
+    text-align: right;
     color: transparent;
-    font-size: 6em;
+    font-size: 4em;
 }
 
 .landing-page--intro--desc {
-    position: relative;
-    right: 25%;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 
@@ -81,7 +77,7 @@ h1 {
 .circuit-trace {
     fill: none;
     stroke:url("#trace-gradients");
-    stroke-width:15;
+    stroke-width: 15;
 }
 
 /* -- */
@@ -93,6 +89,33 @@ h1 {
 /* @ Device Styles */
 
 @media (min-width: 1200px) {
+    .landing-page--intro {
+        width: 50%;
+    }
+}
+
+@media (min-height: 900px) {
+    .landing-page--intro--header-0 {
+        font-size: 6em;
+    }
+    .landing-page--intro--header-1 {
+        font-size: 7em;
+    }
+    .landing-page--intro--desc {
+        font-size: 2em;
+    }
+}
+
+@media (min-height: 600px) {
+    .landing-page--intro--header-0 {
+        font-size: 4em;
+    }
+    .landing-page--intro--header-1 {
+        font-size: 5em;
+    }
+    .landing-page--intro--desc {
+        font-size: 1.5em;
+    }
 }
 
 /* -- */
